@@ -1,0 +1,17 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: discord-url
+  namespace: mfa
+spec:
+  encryptedData:
+    address: AgAJNrBHD7j0p62AqO20H4+sfomKR76StgWpkm1KeR6eY2wDniZu9mWgyhaNqcVJNqog4P19jNyf6N1qIfpF8ephW3dQau8rG8s07zomycaButDCfdGJffaxbrKMWOOjvTJafE9+YTlYGBcAKCVK8vXvMMwESkoH3PA4l4xK3ZDFU6Hzf5HdiXvh3josxdt8vvRgrrp5S6GKgOA7iu2+XjqZJtE5/pccKtUuSxoB8y58+QalFWGvap1HQ7Uy1zGQv3zF12NmBojvVK8iBDDGW0cWFSNy4GRAKmWpZlQ9bFd0tiXFQy/1gFgku1ruVaobe8ohqUjKmCD9NbHosgZcQcBFZ2PwdjmOWgoPWCFso9vw0hW6Mw6YyLWrceg2G8BAHulLJAwVZ3zpuRiGS+GlJAiMJoa+9wSg9HNJJ2Cax//I7skTd4Vu+ikB0eHwWKuqu+w1i8Po65Vk6uYj+esgWEsQOYQeXog9ctsn1I8hL/yE130rya4F1rZNCoUaOTeZVLP9ozf1Ao2pjmAHkMcvEXXMi6LjLqDNGmIUhHliK6mDWJEAVteKzzqFnt9/FVpV3PUdWMdFpXzia3crU8ug86C0zg0dotKs7RgmloZ/bYdw2eT7NLaUcwNZA8X3exr1+wjQdCv9GlP9JIbQf8xnDDEIN9acE9Qn4+pLLXvoWpVusqowYCtlss7lYHcjug9Of72ehXXKt5aiPt5Z0IZvZ7ifnxhFNdZc8vo1pDJU5SYu6b1772974RV72VhdcYZ8cSKsbNFouumSo5wGNmZyToKnYCAtyUQAHRlQiDpbMc+QNBEeuV8g+KnLTi/FhgL6AJ0Pkh4x5xhuzUOCd+GLs122/QCJUvaCN/U=
+  template:
+    data: null
+    metadata:
+      creationTimestamp: null
+      name: discord-url
+      namespace: mfa
+    type: Opaque
+

@@ -1,0 +1,17 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: discord-url
+  namespace: blockchain
+spec:
+  encryptedData:
+    address: AgCzlQSLaHqHEHkgg3/9huYR3J1QmGT1QPLTmGFDg/YMPVGm7AthRSXyRxeJXukCRS8P2GQb8CD1HBXxDhXuES7L6l5pNSYfmck4TzsTfCuq6bkXj4rSV6pe6kT+/lg3Ra8ZsZ7/u607u8AmfVwl091pzA9zgy/Z53zpNshFRmVf4lEY0wejJy5/SX8nWOi3ggjLfc6WVf8eZSd+oTUrK27pQet70YVZShNzQaNcwO4umW4qeRw/UY6UHD7MCKNX+h6vpMpgN9z86d8qjjvnvMQoYHEGJBNb0BFhKZWMO/PJeBO7E4EAiOmLsoWbmTnuEgDi8UHpRJNIRiCK4+++yMSyro/TjkCQkWtH0nBdXVGGrOTkZWcuAHs/pGiXpGrZJTmrSQtgBZ8Ab5r9JN98WFBdcyo3yNg6xFYN9PVAHG7NxiXbZHmkgCtjnyJJR5JzYDmxWrKiHUH1WfYu6tEeSb44gu/IcJz69rHrhtvuc3UUsxik4tZ9uHRXUShHt1lozMpI01UMR57+93uKeTe8S/QdQytcmF35eGsuEX9GsTpo5ROU3Ax0ykQZ4LcAqHRSF8OeleHUYz2nwdhe6M76NLTBUDKVv56ylm1SD9MRbQdjpzIOwTOWrsNLh70K1sRhBv3aHx8g4ImTihc+XaITcqMc6s2uE7hWZ5zwCjr2vS5HmznVpRAshGDlUS3uHY7Yb4pWW+Lq9vhUCE2qQa41X2+tPNwQNfveV51aF7RUV0QnkrJpTrREAn8AJJYAfby6UOnqSX0W6+xTP3wnTSHVyCmZW5c9cd51482Mp95VCBkN0SiMI7bMor2eTR0LiqPfdkWSa24V5x6xmu1Pl9in4S/6nO8wQButRhI=
+  template:
+    data: null
+    metadata:
+      creationTimestamp: null
+      name: discord-url
+      namespace: blockchain
+    type: Opaque
+
