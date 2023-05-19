@@ -29,66 +29,66 @@
 #  serviceAccountName: kustomize-controller
 #  path: ./infrastructure/kyverno-policies
 #  prune: true
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: helm-repositories
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./infrastructure/sources
-  prune: true
-  validation: client
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: sonar
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./infrastructure/sonar
-  prune: true
-  validation: client
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: cert-manager
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./infrastructure/cert-manager
-  prune: true
-  validation: client
-  postBuild:
-    substituteFrom:
-      - kind: ConfigMap
-        name: cert-manager-version
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: certs
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./infrastructure/certs
-  prune: true
-  validation: client
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+# kind: Kustomization
+# metadata:
+#   name: helm-repositories
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#   path: ./infrastructure/sources
+#   prune: true
+#   validation: client
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+# kind: Kustomization
+# metadata:
+#   name: sonar
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#   path: ./infrastructure/sonar
+#   prune: true
+#   validation: client
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+# kind: Kustomization
+# metadata:
+#   name: cert-manager
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#   path: ./infrastructure/cert-manager
+#   prune: true
+#   validation: client
+#   postBuild:
+#     substituteFrom:
+#       - kind: ConfigMap
+#         name: cert-manager-version
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+# kind: Kustomization
+# metadata:
+#   name: certs
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#   path: ./infrastructure/certs
+#   prune: true
+#   validation: client
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
@@ -103,119 +103,119 @@ spec:
   path: ./infrastructure/keycloak
   prune: true
   validation: client
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: sealed-secrets
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./infrastructure/sealed-secrets
-  prune: true
-  validation: client
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: vault
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./infrastructure/vault
-  prune: true
-  validation: client
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: secrets
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./infrastructure/secrets
-  prune: true
-  validation: client
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: github-actions
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./infrastructure/github-actions
-  prune: true
-  validation: client
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: github-actions-runner
-  namespace: flux-system
-spec:
-  interval: 1m
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./infrastructure/github-actions-runner
-  prune: true
-  validation: client
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: chatops
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./infrastructure/chatops
-  prune: true
-  validation: client
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: chatops-yakeey
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./infrastructure/chatops-yakeey
-  prune: true
-  validation: client
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: litmus
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./infrastructure/litmus
-  prune: true
-  validation: client
----
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+# kind: Kustomization
+# metadata:
+#   name: sealed-secrets
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#   path: ./infrastructure/sealed-secrets
+#   prune: true
+#   validation: client
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+# kind: Kustomization
+# metadata:
+#   name: vault
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#   path: ./infrastructure/vault
+#   prune: true
+#   validation: client
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+# kind: Kustomization
+# metadata:
+#   name: secrets
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#   path: ./infrastructure/secrets
+#   prune: true
+#   validation: client
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+# kind: Kustomization
+# metadata:
+#   name: github-actions
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#   path: ./infrastructure/github-actions
+#   prune: true
+#   validation: client
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+# kind: Kustomization
+# metadata:
+#   name: github-actions-runner
+#   namespace: flux-system
+# spec:
+#   interval: 1m
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#   path: ./infrastructure/github-actions-runner
+#   prune: true
+#   validation: client
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+# kind: Kustomization
+# metadata:
+#   name: chatops
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#   path: ./infrastructure/chatops
+#   prune: true
+#   validation: client
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+# kind: Kustomization
+# metadata:
+#   name: chatops-yakeey
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#   path: ./infrastructure/chatops-yakeey
+#   prune: true
+#   validation: client
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+# kind: Kustomization
+# metadata:
+#   name: litmus
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#   path: ./infrastructure/litmus
+#   prune: true
+#   validation: client
+# ---
 #apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 #kind: Kustomization
 #metadata:
@@ -284,20 +284,20 @@ spec:
 #  path: ./infrastructure/logging/loki
 #  prune: true
 #  validation: client
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: dependency-track
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./infrastructure/dependency-track
-  prune: true
-  validation: client
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+# kind: Kustomization
+# metadata:
+#   name: dependency-track
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#   path: ./infrastructure/dependency-track
+#   prune: true
+#   validation: client
 #---
 #apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 #kind: Kustomization
@@ -312,48 +312,48 @@ spec:
 #  path: ./infrastructure/kyverno-reporter
 #  prune: true
 #  validation: client
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: harbor
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./infrastructure/harbor
-  prune: true
-  validation: client
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: faros
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./infrastructure/faros
-  prune: true
-  validation: client
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: milvus-operator
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./infrastructure/operators/milvus
-  prune: true
-  validation: client
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+# kind: Kustomization
+# metadata:
+#   name: harbor
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#   path: ./infrastructure/harbor
+#   prune: true
+#   validation: client
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+# kind: Kustomization
+# metadata:
+#   name: faros
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#   path: ./infrastructure/faros
+#   prune: true
+#   validation: client
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+# kind: Kustomization
+# metadata:
+#   name: milvus-operator
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#   path: ./infrastructure/operators/milvus
+#   prune: true
+#   validation: client
 #---
 #apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 #kind: Kustomization
