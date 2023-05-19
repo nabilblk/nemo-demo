@@ -67,7 +67,7 @@ spec:
   interval: 10m0s
   sourceRef:
     kind: GitRepository
-    name: flux-system
+    name: nemo-demo-flux2-sync
   path: ./infrastructure/cert-manager
   prune: true
   validation: client

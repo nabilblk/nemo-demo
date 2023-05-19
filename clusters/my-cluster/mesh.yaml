@@ -1,0 +1,49 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: istio-system
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  path: ./infrastructure/istio/system
+  prune: true
+  wait: true
+  sourceRef:
+    kind: GitRepository
+    name: nemo-demo-flux2-sync
+  postBuild:
+    substituteFrom:
+      - kind: ConfigMap
+        name: istio-version
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: istio-gateway
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: istio-system
+  interval: 10m0s
+  path: ./infrastructure/istio/gateway
+  prune: true
+  wait: true
+  sourceRef:
+    kind: GitRepository
+    name: nemo-demo-flux2-sync
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: istio-integration
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: istio-system
+  interval: 10m0s
+  path: ./infrastructure/istio/integration
+  prune: true
+  wait: true
+  sourceRef:
+    kind: GitRepository
+    name: nemo-demo-flux2-sync
