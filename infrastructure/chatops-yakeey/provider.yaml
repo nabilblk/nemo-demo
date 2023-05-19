@@ -1,0 +1,10 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta1
+kind: Provider
+metadata:
+  name: slack
+  namespace: yakeey
+spec:
+  type: slack
+  channel: yk-plateform-events-clusterdiali
+  secretRef:
+    name: slack-url

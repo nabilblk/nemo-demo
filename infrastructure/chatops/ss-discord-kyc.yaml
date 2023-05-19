@@ -1,0 +1,17 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: discord-url
+  namespace: kyc
+spec:
+  encryptedData:
+    address: AgDLQ0UMenVPRvOAkH/Vydtl5xY2WF6DT+jtzcGx3oNbk6an4xZylcp1zL9wZon4fEq6rk73+21Ekk9JC7vCW+flDoh4no1lq5ixssRJw40oWo+OcqDzteaR5bILS6tHjTi/zMnT42JRiK52Gq4TaBL4yDRn/8lJM2sqzJCgPKGFI3bCnqSHj1zeU13qGbV2dF3JLScqj7stRb1ExlRv2w+WJWTauR/KniJPT4NUi73jRI9y5QUR+E1l44frqHQDFdo+/p8MT/89JGvhcHsspsparWHbW6UQ7+8Ytb0MP7O7R46H+u+aqufO+Ppf+wgHU4NbJj2fXGxkbAYa+VzVlHc//XOtVWq5PotSP95bJNZ5WM71tULF3EI2OiwoRfyZYVsPXEj1UG/j/2VcFgERKkmO/w3RvCoP8C+ypoVWpPtKjrf18nyjavomeqhyH314SIv0VDt2r2orPdWE6mAcwQoBcdfHuiTGQFwSvhzDHwWo1RziCsxoqbE+Ws2B2vqeNnQ2H6LlohewL5+jY5Av0HXxK4KDC5Gw+w9fzPRGV1CLykwu3y2AMERoiEDRN57+BJ6wq2eSBcdgYotOc0h0z7IJQ3krwuhNOlKevHJdiHJZw4QhU3mUzYMnJ9h5OgfQ3YXcAzWMyIQHX2iktWWjqF9XAtiAHqoUNKNyezK9x0E8kDAuVRDjqSUOJ239n2Lonyl9hKIQkXReXPI6fkOZKqJDvHrfHujicfbwb1MzNlKlgYQQ+8BgtKLqoDSi5g3o5Cukk9ifJG2XDcudpuidqpX+7spOYCK8ShZyveJdTCtD+u7/fNRyxQX/Lr4hvt25txJuXMS8xjslyINPGX+tsM8olY9gdTSxP1Q=
+  template:
+    data: null
+    metadata:
+      creationTimestamp: null
+      name: discord-url
+      namespace: kyc
+    type: Opaque
+

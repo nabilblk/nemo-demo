@@ -1,0 +1,17 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: discord-url
+  namespace: sredx
+spec:
+  encryptedData:
+    address: AgAJPSdDLf7zSMkEpx+yOU3AwypCXOyHPAaVwWJvIISr1+7PAta4uQyDj3P6l4VrIOpRfLR3uXjn4JTYwSYNos6j8tXlRMBjIIBJlxvxDY1CsGQpxgNiJJQTHKSNVE6vomOvci4M2KVCNXTlmbchFzBy9chYDxnTKgDNldeGeb+AZ4CKz4z2NB6IGBeg/lhzaUkOicIIW4lz8QCJFHjJy+wW+p5KQdYcLphbdQuG4dJcgIg+z7CRq/cDO61ldXqeYHSzcf4x+SzYFEhFMSyQAX9KwUoXK6n/6VEWTa2JVeLo4loloceDoBxdndsrmpzsGouL5UNMCHlc8XkJ8JrwzOao5i5/8ysIFHjmZNnWAJW729gHXAJ6ya7yY88eRx1jVH76l+6oQlt8DPK4vLFn5R4pUS5kXbzZta3OMHxwhyDJ8lsJCIBQOQQZYKh8ToxyCxPtMu2VM8xAmOxW6W9fA0QiE8UzPlwKywAjYAfpv/5gFC8LB5J+qORKGIwbXq4pIy9HTTMdjt0FlqzidZLnaZFeEslV45OJ6PsoQMHAAsauJOGL5py9UulJoLoQ+2/KxiHxLbpe4UqiSr0unrgdNYS5U4XXSjolSHJ1M1Rtn8hjME5DbLkBSgNDBixEKqm3sH7YwW+vh78MSyqCOLWYS0mbs4fLlTIVm/NfYKsj0rtdAv/Y5nqaYpJKjnNIqjFsJNwChuL0CKpteDE0NOpmc2bd+IPn3MDGo7DolHJ/mGS/3KOdLdJesK3Wxyo9HYGuB9I+9p2FnCOmv/XxkGADDT6ZqNnjW1fUkxPWDZgJGHWdu2pbDewFEkYHX1Qex79k18/Se/P5VrnAWw6qlgamSMSgoRkd4pLYcuc=
+  template:
+    data: null
+    metadata:
+      creationTimestamp: null
+      name: discord-url
+      namespace: sredx
+    type: Opaque
+

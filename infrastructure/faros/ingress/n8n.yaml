@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: n8n-ingress
+  labels:
+    app.kubernetes.io/component: n8n
+    app.kubernetes.io/instance: n8n
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: 'true'
+    cert-manager.io/issuer: letsencrypt-campus
+spec:
+  tls:
+    - hosts:
+        - n8n.campus.clusterdiali.me
+      secretName: n8n.campus.clusterdiali.me-tls
+  rules:
+    - host: n8n.campus.clusterdiali.me
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: n8n
+                port:
+                  number: 80

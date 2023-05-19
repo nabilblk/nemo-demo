@@ -1,0 +1,21 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: confluent
+spec:
+  releaseName: confluent
+  chart:
+    spec:
+      chart: confluent-for-kubernetes
+      sourceRef:
+        kind: HelmRepository
+        name: confluentinc
+        namespace: flux-system
+      version: "0.435.11"
+  interval: 10m0s
+  install:
+    remediation:
+      retries: 3
+  valuesFrom:
+    - kind: ConfigMap
+      name: confluent-values
